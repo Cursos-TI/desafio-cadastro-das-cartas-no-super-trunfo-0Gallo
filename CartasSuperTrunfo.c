@@ -43,10 +43,6 @@ int main() {
     printf("Digite quantos pontos turisticos ha nesta cidade: \n");
     scanf("%d", &pontosturisticos);
 
-    densidadepop = (float) populacao / areakm2;
-
-    pibpc = (float) pib / populacao;
-
 //.resultado final da demonstracao da carta
     printf("Estado: %c\n", estado);
     printf("Codigo da carta: %s\n", codigocarta);
@@ -55,10 +51,8 @@ int main() {
     printf("Area em km2: %.2f\n", areakm2);
     printf("P.I.B.: %.2f\n", pib);
     printf("Pontos Turisticos: %d\n", pontosturisticos);
-    printf("Densidade populacional : %.0f\n", densidadepop);
-    printf("PIB per capita : %.2f\n", pibpc);
 //agradecimento
-    printf("Parabens, sua carta ficou incrivel, obrigado por testar meu program
+    printf("Parabens, sua carta ficou incrivel, obrigado por testar meu programa");
 
     return 0;
 }
