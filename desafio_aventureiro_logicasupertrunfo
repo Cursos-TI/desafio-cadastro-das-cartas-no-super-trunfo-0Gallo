@@ -1,0 +1,159 @@
+#include <stdio.h>
+
+int main () {
+
+//.cadastro da carta 1 feito diretamente no codigo
+    char estado1[10] = "A";
+    char codigocarta1[20] = "A01";
+    char nomecidade1[20] = "Rio de Janeiro";
+    int populacao1 = 6748000;
+    float areakm1 = 1200.25;
+    float pib1 = 300499992576.00;
+    int pontosturisticos1 = 50;
+    float densidadepopulacional1;
+    float pibpc1;
+    int comparacao;
+
+ //.calculo densidade populacional e pib per capita da primeira carta
+
+    densidadepopulacional1 = populacao1 / areakm1;
+    pibpc1 = pib1 / populacao1;
+
+//.cadastro da carta 2 feito diretamente no codigo
+    char estado2[10] = "B";
+    char codigocarta2[20] = "B01";
+    char nomecidade2[20] = "Sao Paulo";
+    int populacao2 = 12325000;
+    float areakm2 = 1521.11;
+    float pib2 = 699279998976.00;
+    int pontosturisticos2 = 30;
+    float densidadepopulacional2 = 8102.47;
+    float pibpc2 = 56724.32;
+
+//.calculo densidade populacional e pib per capita da segunda carta
+
+    densidadepopulacional2 = populacao2 / areakm2;
+    pibpc2 = pib2 / populacao2;
+
+//. demonstração da primeira carta ja registrada
+    printf("+--Carta 1--+ \n");
+    printf("Estado : %s\n", estado1);
+    printf("Codigo da carta : %s\n", codigocarta1);
+    printf("Nome da Cidade : %s\n", nomecidade1);
+    printf("Populacao : %d\n", populacao1);
+    printf("Aream em KM2 : %.2f\n", areakm1);
+    printf("P.I.B. : %.2f\n", pib1);
+    printf("Quantidade de Pontos Turisticos : %d\n", pontosturisticos1);
+    printf("Densidade Populacional : %.2f\n", densidadepopulacional1);
+    printf("P.I.B. per capita : %.2f\n", pibpc1);
+    printf("\n");
+
+//. demonstração da segunda carta ja registrada
+    printf("+--Carta 2--+ \n");
+    printf("Estado : %s\n", estado2);
+    printf("Codigo da carta : %s\n", codigocarta2);
+    printf("Nome da Cidade : %s\n", nomecidade2);
+    printf("Populacao : %d\n", populacao2);
+    printf("Aream em KM2 : %.2f\n", areakm2);
+    printf("P.I.B. : %.2f\n", pib2);
+    printf("Quantidade de Pontos Turisticos : %d\n", pontosturisticos2);
+    printf("Densidade Populacional : %.2f\n", densidadepopulacional2);
+    printf("P.I.B. per capita : %.2f\n", pibpc2);
+    printf("\n");
+
+//. Menu de escolhas do atributo a ser comparado
+    printf("Escolha qual atributo sera comparado : \n");
+    printf("1. Populacao\n");
+    printf("2. Area em Km2\n");
+    printf("3. P.I.B.\n");
+    printf("4. Quantidade de Pontos Turisticos\n");
+    printf("5. Densidade Populacional\n");
+    scanf("%d", &comparacao);
+
+//. Switch de escolhas das opcoes
+
+    switch(comparacao){
+//. dados de ambas as cartas caso a opcao de populacao seja escolhida para comparação
+        case 1:
+        printf("Rio de Janeiro -X- Sao Paulo\n");
+        printf("Atributo comparado : Populacao\n");
+        printf("Populacao do Rio de Janeiro - %d\n", populacao1);
+        printf("Populacao de Sao Paulo - %d\n", populacao2);
+
+        if ((populacao1 > populacao2)){
+            printf("Carta 1 venceu em Populacao");
+        } else if ((populacao1 < populacao2)) {
+            printf("Carta 2 venceu em Populacao");
+        } else {
+            printf("Empate!");
+        }
+        break;
+//. dados de ambas as cartas caso a opcao de area em km2 seja escolhida para comparação
+        case 2:
+        printf("Rio de Janeiro -X- Sao Paulo\n");
+        printf("Atributo comparado : Area em km2\n");
+        printf("Area em KM2 do Rio de Janeiro : %.2f\n", areakm1);
+        printf("Area em KM2 de Sao Paulo : %.2f\n", areakm2);
+
+        if ((areakm1 > areakm2)){
+            printf("Carta 1 venceu em Area");
+        } else if ((areakm1 < areakm2)) {
+            printf("Carta 2 venceu em Area");
+        } else {
+            printf("Empate!");
+        }
+        break;
+//. dados de ambas as cartas caso a opcao de pib seja escolhida para comparação
+        case 3:
+        printf("Rio de Janeiro -X- Sao Paulo\n");
+        printf("Atributo comparado : P.I.B.\n");
+        printf("P.I.B. do Rio de Janeiro : %.2f\n", pib1);
+        printf("P.I.B. de Sao Paulo : %.2f\n", pib2);
+        if ((pib1 > pib2)){
+            printf("Carta 1 venceu em P.I.B.");
+        } else if ((pib1 < pib2)) {
+            printf("Carta 2 venceu em P.I.B.");
+        } else {
+            printf("Empate!");
+        }
+        break;
+//. dados de ambas as cartas caso a quantidade de pontos turisticos seja escolhida para comparação
+        case 4:
+        printf("Rio de Janeiro -X- Sao Paulo\n");
+        printf("Atributo comparado : Pontos Turisticos\n");
+        printf("Pontos Turisticos do Rio de Janeiro : %d\n", pontosturisticos1);
+        printf("Pontos Turisticos de Sao Paulo : %d\n", pontosturisticos2);
+        if ((pontosturisticos1 > pontosturisticos2)){
+            printf("Carta 1 venceu em Pontos Turisticos");
+        } else if ((pontosturisticos1 < pontosturisticos2)) {
+            printf("Carta 2 venceu em Pontos Turisticos");
+        } else {
+            printf("Empate!");
+        }
+        break;
+//. dados de ambas as cartas caso a opcao da densidade populacional seja escolhida para comparação
+        case 5:
+        printf("Rio de Janeiro -X- Sao Paulo\n");
+        printf("Atributo comparado : Densidade Populacional\n");
+        printf("Densidade Populacional do Rio de Janeiro : %.2f\n", densidadepopulacional1);
+        printf("Densidade Populacional de Sao Paulo : %.2f\n", densidadepopulacional2);
+        if ((densidadepopulacional1 < densidadepopulacional2)){
+            printf("Carta 1 venceu em Densidade Populacional");
+        } else if ((densidadepopulacional1 > densidadepopulacional2)) {
+            printf("Carta 2 venceu em Densidade Populacional");
+        } else {
+            printf("Empate!");
+        }
+        break;
+//. caso uma opcao não valida seja escolhida
+        default:
+        printf("Opcao invalida\n");
+        printf("Reinicie o programa e escolha novamente\n");
+        break;
+
+    }
+
+//. fim do programa
+
+    return 0;
+}
